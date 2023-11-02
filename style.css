@@ -1,138 +1,134 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'gilroy';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "gilroy";
 }
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: fixed;
+  background-blend-mode: color-burn;
+  filter: blur(-10px);
 }
-html,body{
-    height:100%;
-    width:100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
-#box{
+#box {
+  filter: brightness(10px);
+  /* display: flex; */
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 380px;
+  background: linear-gradient(
+    rgba(219, 226, 127, 0.747),
+    rgba(235, 27, 62, 0.795)
+  );
+  box-shadow: 5px 10px 16px;
+  border-radius: 20px;
+}
 
-    /* display: flex; */
-    position: absolute;
-   align-items: center;
-   justify-content: center;
-    width: 380px;
-    background: linear-gradient(rgb(220, 226, 127), rgb(235, 27, 62)) ;
-    box-shadow:5px 10px 16px ;
-    border-radius: 20px;
-}
-
-#box input{
-    background: linear-gradient(rgb(220, 226, 127), rgba(235, 27, 62, 0.192)) ;
-    margin-top: 10px;
-    width: 80%;
-    padding: 10px 0px 10px 20px;
-    margin-left: 15px;
-    border-radius: 13px;
-    border: 2px solid yellow;
-    outline: none;
-    font-size: large;
-    font-weight: 600;
-    font-style: italic;
-    text-align: center;
-    text-transform: uppercase;
-    
+#box input {
+  background: linear-gradient(rgb(220, 226, 127), rgba(235, 27, 62, 0.192));
+  margin-top: 10px;
+  width: 80%;
+  padding: 10px 0px 10px 20px;
+  margin-left: 15px;
+  border-radius: 13px;
+  border: 2px solid yellow;
+  outline: none;
+  font-size: large;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
 }
 #box button {
-    position: absolute;
-    height: 40px;
-    width: 40px;
-    margin-left: 8px;
-    align-items: center;
-    border: none;
-    margin-top: 12px;
-   outline: none;
-   border-radius:  20px;
-   background: transparent;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  margin-left: 8px;
+  align-items: center;
+  border: none;
+  margin-top: 12px;
+  outline: none;
+  border-radius: 20px;
+  background: transparent;
+}
+button input {
+  position: relative;
+}
+#box button img {
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 2px solid yellow;
+  background: transparent;
+  object-fit: cover;
+  object-position: right;
+}
+.img {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+h2 {
+  margin-top: 20px;
+}
+.cloud {
+  width: 100px;
+}
+.w-s {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.w {
+  text-align: center;
+  margin-top: 5px;
+}
+.s {
+  margin-top: 5px;
+  text-align: center;
+}
+h4 {
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.w img {
+  height: 50px;
+}
+.s img {
+  height: 50px;
+}
 
-}
-button input{
-    position: relative;
-    
-}
-#box button img{
+@media (max-width: 400px) {
+  body {
+    background: linear-gradient(rgb(220, 226, 127), rgb(235, 27, 62));
+  }
+  #box {
+    width: 88%;
+  }
+  button img {
+    /* margin-top: 2px; */
+    margin-right: 5px;
     padding: 5px;
-    height: 40px;
-    width: 40px;
-   border-radius:  20px;
-   border: 2px solid yellow ;
-   background: transparent;
-   object-fit: cover;
-   object-position: right;
-}
-.img{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-h2{
-    margin-top: 20px;
-}
-.cloud{
-    width: 100px;
-   
-}
-.w-s{
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.w{
-    text-align: center;
-    margin-top: 5px;
-
-}
-.s{
-    margin-top: 5px;
-    text-align: center;
-}
-h4{
-    font-style: italic;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.w img{
-    height: 50px;
-}
-.s img{
-    height: 50px;
-}
-
-@media (max-width:400px) {
-    body{
-        
-        background: linear-gradient(rgb(220, 226, 127), rgb(235, 27, 62)) ;
-
-    }
-    #box{
-        width: 88%;
-    }
-     button img{
-        /* margin-top: 2px; */
-        margin-right: 5px;
-        padding: 5px;
-        
-     }
-    #box button img{
-        
-        
-        height: 45px;
-        width: 45px;
-     }
-     #box input{
-        margin-left: 10px;
-     }
+  }
+  #box button img {
+    height: 45px;
+    width: 45px;
+  }
+  #box input {
+    margin-left: 10px;
+  }
 }
