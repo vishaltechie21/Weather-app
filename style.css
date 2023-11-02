@@ -8,7 +8,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: fixed;
+  background: linear-gradient(#eb6e8d,#eaeaea);
   background-blend-mode: color-burn;
   filter: blur(-10px);
 }
@@ -114,7 +114,8 @@ h4 {
 
 @media (max-width: 400px) {
   body {
-    background: linear-gradient(rgb(220, 226, 127), rgb(235, 27, 62));
+    background: linear-gradient(#eb6e8d,#eaeaea);
+    background-blend-mode: color-burn;
   }
   #box {
     width: 88%;
